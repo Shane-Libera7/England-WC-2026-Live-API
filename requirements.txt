@@ -1,0 +1,9 @@
+python-dotenv
+fastapi
+sqlalchemy
+alembic
+pydantic
+httpx
+celery
+redis
+psycopg2
