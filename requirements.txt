@@ -1,6 +1,7 @@
 python-dotenv
 fastapi
 sqlalchemy
+sqlmodel
 alembic
 pydantic
 httpx
