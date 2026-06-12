@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from sqlalchemy import select
 from app.models.group_standing import Group
-
+from app.schemas.standings import Group as GroupSchema
 from app.db import SessionDep
 
 
@@ -12,6 +12,6 @@ router = APIRouter(
 
 
 @router.get("/")
-async def get_standing(session: SessionDep) -> list[Group]:
+async def get_standing(session: SessionDep) -> list[GroupSchema]:
     standing = session.scalars(select(Group)).all()
     return standing
